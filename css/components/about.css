@@ -1,0 +1,38 @@
+.about {
+    padding: 100px 15px;
+    background: var(--second-bg-color);
+}
+  
+.about__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+}
+  
+.about__left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 40%;
+}
+  
+.about__right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 40%;
+}
+  
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+  
+.social-icons li {
+    list-style: none;
+}
+  

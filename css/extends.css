@@ -1,0 +1,10 @@
+@import url('/css/variables.css');
+@import url('/css/globals.css');
+
+@import url('/css/components/header.css');
+@import url('/css/components/about.css');
+@import url('/css/components/skills.css');
+@import url('/css/components/projects.css');
+@import url('/css/components/contact.css');
+@import url('/css/components/footer.css');
+@import url('/css/components/media.css');

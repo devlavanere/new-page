@@ -1,0 +1,16 @@
+<svg width="300" height="100" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text {
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      font-size: 24px;
+      fill: #333;
+    }
+    .code {
+      fill: #007bff; /* Azul claro */
+    }
+  </style>
+
+  <path class="code" d="M20,20 L80,80 L140,20 Z" />  
+  <text class="text" x="160" y="50">MSampaio</text>
+</svg>
