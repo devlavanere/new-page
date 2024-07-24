@@ -1,0 +1,20 @@
+[
+    {
+      "imagem": "assets/tartarugas-marinhas.png",
+      "titulo": "Projeto Casco Vivo",
+      "descricao": "Projeto desenvolvido com HTML, CSS e JavaScript. Que tem como intuito colocar em pauta a preservação das tartarugas marinhas.",
+      "link": "https://projeto1-ls-casco-vivo.vercel.app/"
+    },
+    {
+      "imagem": "assets/dark-light-mode.png",
+      "titulo": "Dark Light Mode",
+      "descricao": "Landing Page Simples de divulgação de uma barbearia construido, em ReactJS, para exibição em Light e Dark Mode.",
+      "link": "https://dark-e-light-mode.vercel.app/"
+    },
+    {
+      "imagem": "assets/pokedex.png",
+      "titulo": "Pokedex",
+      "descricao": "Projeto que usa fetch api para buscar os pokemons na pokeapi.co. Ele faz novas requisões a api todo vez que é clicado no botão load",
+      "link": "https://43c1c85d-7860-4be7-923e-8da125d915d3-00-2n1b7umxyfxr1.riker.replit.dev/"
+    }
+]

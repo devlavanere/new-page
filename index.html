@@ -23,6 +23,11 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   </head>
   <body>
+    <!-- Botão para alternar o tema -->
+    <button id="theme-toggle">
+      <i class="bx bx-sun" id="theme-icon"></i>
+    </button>
+
     <!-- header -->
     <header class="header">
       <a href="#header" class="logo">
@@ -171,79 +176,41 @@
 
     <!-- Projetos -->
     <section id="projects" class="projects max-width">
-        <div class="projects__content">
-            <h2 class="heading">Projetos</h2>
-            <p>
-              De ideias abstratas a projetos bem-sucedidos, aqui estão alguns dos meus
-              trabalhos mais recentes
-            </p>
-        </div>
+      <div class="projects__content">
+          <h2 class="heading">Projetos</h2>
+          <p>
+            De ideias abstratas a projetos bem-sucedidos, aqui estão alguns dos meus
+            trabalhos mais recentes
+          </p>
+      </div>
 
-        <!-- Swiper -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="assets/tartarugas-marinhas.png" alt="Imagem Projeto Tartarugas" class="image">
-                <div class="project-info">
-                    <h3>Projeto Casco Vivo</h3>
-                    <p>
-                    Projeto desenvolvido com HTML, CSS e JavaScript. Que tem como
-                    intuito colocar em pauta a preservação das tartarugas marinhas.
-                    </p>
-                    <a class="project-link" href="https://projeto1-ls-casco-vivo.vercel.app/"
-                    target="_blank">Acesse o projeto →</a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/dark-light-mode.png" alt="Imagem Projeto Light e Dark Mode" class="image">
-                <div class="project-info">
-                    <h3>Dark Light Mode</h3>
-                    <p>
-                    Landing Page Simples de divulgação de uma barbearia construido, em
-                    ReactJS, para exibição em Light e Dark Mode.
-                    </p>
-                    <a class="project-link" href="https://dark-e-light-mode.vercel.app/"
-                    target="_blank">Acesse o projeto →</a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/pokedex.png" alt="Imagem Projeto Pokedex" class="image">
-                <div class="project-info">
-                    <h3>Pokedex</h3>
-                    <p>
-                    Projeto que usa fetch api para buscar os pokemons na pokeapi.co. Ele
-                    faz novas requisões a api todo vez que é clicado no botão load
-                    </p>
-                    <a class="project-link" href="https://43c1c85d-7860-4be7-923e-8da125d915d3-00-2n1b7umxyfxr1.riker.replit.dev/"
-                    target="_blank">Acesse o projeto →</a>
-                </div>
-              </div>
-              <!-- Adicione mais slides conforme necessário -->
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper" id="swiper-wrapper"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <!-- Fim Swiper -->
     </section>
 
     <!-- Contato -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
+        <h2 class="heading">Contacte - <span>Me</span></h2>
 
         <form id="contact-form" autocomplete="on">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" id="full-name" placeholder="Full Name" riquerid>
+                    <input type="text" id="full-name" placeholder="Nome Completo" riquerid>
                     <input type="email" id="email" placeholder="Email" required>
                 </div>
                 <div class="input-box">
-                    <input type="number" id="phone-number" placeholder="Phone Number" riquerid>
-                    <input type="text" id="subject" placeholder="Subject" riquerid>
+                    <input type="number" id="phone-number" placeholder="Número de Telefone" riquerid>
+                    <input type="text" id="subject" placeholder="Assunto" riquerid>
                 </div>
             </div>
 
             <div class="input-group-2">
-                <textarea id="message" cols="30" rows="10" placeholder="Your Message" riquerid></textarea>
+                <textarea id="message" cols="30" rows="10" placeholder="Sua Mensagem" riquerid></textarea>
                 <input type="submit" value="Send Message" class="btn">
             </div>
         </form>
@@ -268,6 +235,9 @@
 
     <!-- script -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="/scripts.js/index.js"></script>
+    <script src="/scripts/index.js"></script>
+    <script src="/scripts/swiper.js"></script>
+    <script src="/scripts/menu-burguer.js"></script>
+    <script src="/scripts/dark-light-mode.js"></script>
   </body>
 </html>
