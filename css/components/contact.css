@@ -38,3 +38,59 @@
 .contact form .btn {
     margin-top: 2rem;
 }
+
+#response-message {
+    background: var(--main-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.message {
+    position: relative;
+    background: var(--second-bg-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border: 2px solid var(--main-color);
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.message h3 {
+    margin: 0;
+}
+
+.message p {
+    margin: 0.5rem 0;
+}
+
+.message button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.message button:hover {
+    background: darken(var(--main-color), 10%);
+}
+
+.close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: blue;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: darkblue;
+}
