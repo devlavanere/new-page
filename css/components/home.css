@@ -1,0 +1,171 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+  
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+  
+.logo span {
+    color: var(--main-color);
+}
+  
+.home-content h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+  
+.home-content h3 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+
+.home-img img {
+    position: relative;
+    top: 6rem;
+    width: 30vw;
+    border-radius: 20%;
+    box-shadow: 0 0 25px var(--main-color);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.home-img::before,
+.home-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+    box-shadow: 0 0 20px 20px rgba(0, 0, 255, 0.5); /* Inicialmente, sombra azul clara */
+    transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    z-index: -1;
+}
+
+.home-img:hover {
+    transform: scale(1.05);
+}
+
+.home-img:hover::before,
+.home-img:hover::after {
+    opacity: 1;
+    box-shadow: 0 0 30px 30px rgba(0, 0, 255, 0.8); /* Efeito de chama mais intenso ao passar o mouse */
+    animation: flames 0.5s infinite;
+}
+
+@keyframes flames {
+    0% {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px 30px rgba(0, 0, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 255, 0.5);
+    }
+}
+  
+.home-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+}
+  
+.text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+  
+.text-animation span {
+    position: relative;
+}
+  
+.text-animation span::before {
+    content: "Web Developer";
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+  
+.text-animation span::after {
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+  
+@keyframes cursor {
+    to {
+      border-left: 2px solid var(--main-color);
+    }
+}
+  
+@keyframes words {
+    0%,
+    20% {
+      content: "Fullstack Developer;"
+    }
+    21%,
+    40% {
+      content: "Frontend Developer;"
+    }
+    41%,
+    60% {
+      content: "Backend Developer;"
+    }
+    61%,
+    80% {
+      content: "Web Developer;"
+    }
+    81%,
+    100% {
+      content: "Software Tester";
+    }
+}
+  
+@keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    70%,
+    75%,
+    90%,
+    95%{
+      width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+      width: calc(100% + 8px);
+    }
+}
+  
