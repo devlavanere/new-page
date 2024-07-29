@@ -4,7 +4,7 @@
   
 .contact h2 {
     margin-bottom: 3rem;
-    color: white;
+    color: var(--text-color);
 }
   
 .contact form {
@@ -40,12 +40,36 @@
 }
 
 #response-message {
-    background: var(--main-color);
-    color: white;
-    padding: 1rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 2rem;
     border-radius: 0.5rem;
     margin-top: 2rem;
     text-align: center;
+}
+
+#response-message p {
+    color: var(--main-color);
+    font-size: 1.8rem;
+}
+
+#response-message button {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 0 25px var(--main-color);
+    border-radius: 4rem;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#response-message button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px var(--main-color);
 }
 
 .message {
@@ -59,25 +83,34 @@
 }
 
 .message h3 {
+    color: var(--main-color);
+    font-size: 1.5rem;
     margin: 0;
 }
 
 .message p {
-    margin: 0.5rem 0;
+    color: var(--main-color);
+    font-size: 1.2rem;
+    margin: 1rem 0;
 }
 
 .message button {
     margin: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.2rem;
     background: var(--main-color);
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
+    color: var(--bg-color);
+    box-shadow: 0 0 25px var(--main-color);
+    border-radius: 4rem;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .message button:hover {
-    background: darken(var(--main-color), 10%);
+    transform: scale(1.05);
+    box-shadow: 0 0 50px var(--main-color);
 }
 
 .close-btn {

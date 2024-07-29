@@ -19,7 +19,7 @@
   }
 }
   
-@media(max-width: 895px) {
+@media(max-width: 960px) {
   #menu-icon {
     display: block;
   }
@@ -62,5 +62,189 @@
   }
   .home-img img {
     width: 56vw;
+  }
+}
+
+@media(max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  
+  header {
+    padding: 1.5rem 3%;
+  }
+
+  section {
+    padding: 8rem 3% 2rem;
+  }
+
+  .contact form {
+    flex-direction: column;
+  }
+
+  .contact .input-group, 
+  .contact .input-group-2 {
+    flex-direction: column;
+  }
+
+  .contact .input-box {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .footer {
+    padding: 1.5rem 3%;
+  }
+
+  .navbar {
+    width: 70%;
+  }
+
+  .home-content h3 {
+    font-size: 2.4rem;
+  }
+
+  .home-content h1 {
+    font-size: 6rem;
+    margin-top: 2rem;
+  }
+
+  .home-img img {
+    width: 70vw;
+  }
+}
+
+@media(max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+  
+  header {
+    padding: 1rem 3%;
+  }
+
+  section {
+    padding: 6rem 3% 2rem;
+  }
+
+  .about__content {
+    flex-direction: column;
+  }
+
+  .about__left, 
+  .about__right {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .contact form {
+    flex-direction: column;
+  }
+
+  .footer {
+    padding: 1rem 3%;
+  }
+
+  .navbar {
+    width: 100%;
+    padding: 1rem 5%;
+  }
+
+  .navbar a {
+    font-size: 1.8rem;
+    margin: 2rem 0;
+  }
+
+  .home-content h3 {
+    font-size: 2rem;
+  }
+
+  .home-content h1 {
+    font-size: 4.5rem;
+    margin-top: 1rem;
+  }
+
+  .home-img img {
+    width: 80vw;
+  }
+}
+
+@media(max-width: 360px) {
+
+  header {
+    padding: 1rem 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    max-width: 120px; 
+  }
+
+  #menu-icon {
+    display: block;
+    font-size: 2.5rem; 
+  }
+
+  .dark-light-toggle {
+    font-size: 2.5rem; 
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    display: none;
+    z-index: 1000;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 1.5rem 0;
+    color: var(--text-color);
+  }
+
+  .heading {
+    font-size: 5rem;
+  }
+
+  .secondary-title,
+  .tertiary-title {
+    font-size: 3rem;
+  }
+
+  .social-icons a {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+  .home-content h3 {
+    font-size: 2rem;
+  }
+
+  .home-content p {
+    font-size: 1.2rem;
   }
 }

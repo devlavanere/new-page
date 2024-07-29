@@ -3,7 +3,7 @@ const messagesContainer = document.getElementById('messages-container')
 const form = document.getElementById('contact-form')
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     form.addEventListener('submit', async (event) => {
         event.preventDefault()
 
@@ -47,13 +47,13 @@ function validateForm(data) {
     return data['full-name'] && emailPattern.test(data['email']) && phonePattern.test(data['phone-number']) && data['subject'] && data['message']
 }
 
-
 function generateId() {
     return 'msg_' + Date.now()
 }
 
 function saveToLocalStorage(id, data) {
     let messages = JSON.parse(localStorage.getItem('messages')) || {}
+    data.visible = true; // Adiciona a chave de visibilidade
     messages[id] = data;
     localStorage.setItem('messages', JSON.stringify(messages))
 }
@@ -90,11 +90,12 @@ function displayMessages() {
     const messages = JSON.parse(localStorage.getItem('messages')) || {}
 
     for (const [id, message] of Object.entries(messages)) {
+        if (!message.visible) continue; // Ignora mensagens ocultas
         const messageDiv = document.createElement('div')
         messageDiv.className = 'message'
         messageDiv.id = `message-${id}`
         messageDiv.innerHTML = `
-            <button class="close-btn" onclick="deleteMessage('${id}')">&times;</button>
+            <button class="close-btn" onclick="hideMessage('${id}')">&times;</button>
             <h3>${message['full-name']}</h3>
             <p>Email: ${message['email']}</p>
             <p>Telefone: ${message['phone-number']}</p>
@@ -107,25 +108,35 @@ function displayMessages() {
     }
 }
 
+function hideMessage(id) {
+    const messages = JSON.parse(localStorage.getItem('messages')) || {}
+    if (messages[id]) {
+        messages[id].visible = false;
+        localStorage.setItem('messages', JSON.stringify(messages))
+        displayMessages()
+    }
+}
+
 function editMessage(id) {
     const messages = JSON.parse(localStorage.getItem('messages')) || {}
     const message = messages[id];
     const form = document.getElementById('contact-form')
 
     for (const key in message) {
-        if (message.hasOwnProperty(key)) {
+        if (message.hasOwnProperty(key) && key !== 'visible') {
             form.elements[key].value = message[key]
         }
     }
 
-    // Remove old entry and save updated message on submit
     form.addEventListener('submit', function updateMessage(event) {
         event.preventDefault()
-        deleteMessage(id);
-        saveToLocalStorage(generateId(), getFormData())
+        const updatedData = getFormData()
+        updatedData.visible = true; // Garante que a mensagem seja visível
+        messages[id] = updatedData;
+        localStorage.setItem('messages', JSON.stringify(messages))
         displayMessages();
         form.removeEventListener('submit', updateMessage)
-    });
+    }, { once: true });
 }
 
 function deleteMessage(id) {
