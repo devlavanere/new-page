@@ -155,7 +155,7 @@ A landing page portfólio refatorada possui os seguintes elementos:
 
 ### Link para Acesso a Landing Page Ativade 04, Hospedada na Vercel
 
-[Landing-Page-Portfolio](https://new-page-omega.vercel.app/)
+[New-Page](https://new-page-omega.vercel.app/)
 
 ### Autor
 
