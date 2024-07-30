@@ -118,7 +118,7 @@ A landing page portfólio refatorada possui os seguintes elementos:
 ### Branches Refatoração Landing Page Portfólio
 
 - **`main`:** Branch principal do projeto, contendo a versão final da landing page.
-- **`refactor`:** Branch de desenvolvimento, para implementação de novas funcionalidades e correções de bugs.
+- **`refactor`:** Branch para trabalhar de outra máquina usando outro perfil do github, possibilitando assim o envio de Pull Requests.
 
 ### Instruções de Uso da Landing Page Refatorada
 
@@ -141,17 +141,21 @@ A landing page portfólio refatorada possui os seguintes elementos:
 - Fetch API
 - JSON
 - Git
+- GitHub
 
 ### Video da Landing Page Atividade 03
-
-<video src="./assets/landing-page.mp4" controls></video>
+<video src="https://github.com/user-attachments/assets/f0d026ae-48ca-4268-bc12-e5d9cddcad79" controls></video>
 
 ### Video da Landing Page Refatorada
-<video src="./assets/new-page (1).mp4" controls></video>
+<video src="https://github.com/user-attachments/assets/453c2994-a7fb-4298-a1c9-467382b087dc" controls></video>
 
 ### Link para Acesso a Landing Page Ativade 03, Hospedada na Vercel
 
-[Landing-Page-Portfolio](https://landing-page-portfolio-eight.vercel.app/) 
+[Landing-Page-Portfolio](https://landing-page-portfolio-eight.vercel.app/)
+
+### Link para Acesso a Landing Page Ativade 04, Hospedada na Vercel
+
+[Landing-Page-Portfolio](https://new-page-omega.vercel.app/)
 
 ### Autor
 
