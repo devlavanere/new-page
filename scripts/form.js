@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error(error);
             alert('Erro ao enviar a mensagem.')
         }
-    });
+    })
 
     // Mostrar mensagens ao carregar a página
     displayMessages()
-});
+})
 
 function validateForm(data) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -53,8 +53,8 @@ function generateId() {
 
 function saveToLocalStorage(id, data) {
     let messages = JSON.parse(localStorage.getItem('messages')) || {}
-    data.visible = true; // Adiciona a chave de visibilidade
-    messages[id] = data;
+    data.visible = true // Adiciona a chave de visibilidade
+    messages[id] = data
     localStorage.setItem('messages', JSON.stringify(messages))
 }
 
@@ -67,7 +67,7 @@ async function sendForm(data) {
         },
         body: JSON.stringify(data),
         mode: 'cors'
-    });
+    })
     if (!response.ok) {
         throw new Error('Network response was not ok')
     }
@@ -103,7 +103,7 @@ function displayMessages() {
             <p>Mensagem: ${message['message']}</p>
             <button onclick="editMessage('${id}')">Editar</button>
             <button onclick="deleteMessage('${id}')">Deletar</button>
-        `;
+        `
         messagesContainer.appendChild(messageDiv)
     }
 }
